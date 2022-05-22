@@ -4,4 +4,8 @@
 
 A "meta component" for rendering dynamic components or elements.
 
-This just is a demo currently
+_This just is a demo currently_
+
+## Run
+
+`yarn && yarn dev`

@@ -5,12 +5,20 @@ interface IPropsDynamicComponent<T extends React.ElementType> {
   children?: React.ReactNode
 }
 
-type TPropsDynamicComponent<T extends React.ElementType> =
+/**
+ * Dynamic component's props
+ *
+ * @params React.ElementType
+ */
+export type TPropsDynamicComponent<T extends React.ElementType> =
   IPropsDynamicComponent<T> & Omit<React.ComponentProps<T>, 'is' | 'children'>
 
 /**
  * Dynamic component
- * @default is: div
+ *
+ * @params TPropsDynamicComponent
+ *
+ * @default is: div { <T extends React.ElementType> }
  */
 function DynamicComponent<E extends React.ElementType>({
   is,
